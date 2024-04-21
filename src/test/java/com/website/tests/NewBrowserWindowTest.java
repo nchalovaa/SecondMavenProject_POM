@@ -17,5 +17,5 @@ public class NewBrowserWindowTest extends TestBase {
         @Test
     public void NewWindowsTest(){
             new NewBrowserWindowPage(driver).switchToNextWindow(1).verifyNewWindowMessage("New Window");
-        } 
+        }
 }

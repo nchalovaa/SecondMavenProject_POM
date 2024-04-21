@@ -31,4 +31,29 @@ public class SidePanel extends BasePage{
         return new OpenLinkPage(driver);
     }
 
+
+    @FindBy(css="a[href='/upload']")
+    WebElement upload;
+
+    public FileUploadPage selectFileUploadButton() {
+        click(upload);
+        return new FileUploadPage(driver);
+    }
+
+
+    @FindBy(css="a[href='/dropdown']")
+    WebElement dropdown;
+
+    public DropDownPage selectDropDownButton() {
+    click(dropdown);
+        return new DropDownPage(driver);
+    }
+
+    @FindBy(css="a[href='/checkboxes']")
+    WebElement checkboxes;
+
+    public CheckBoxPage selectCheckBoxesButton() {
+        click(checkboxes);
+        return new CheckBoxPage(driver);
+    }
 }
