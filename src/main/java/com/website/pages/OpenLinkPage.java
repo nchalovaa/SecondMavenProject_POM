@@ -16,7 +16,7 @@ public class OpenLinkPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(css = "a[href='/windows']")
+    @FindBy(css = "[href='/windows/new']") //  //class[.='example'] - //div[@class='example']
     WebElement newWindow;
 
     public NewBrowserWindowPage selectBrowserWindows() {
@@ -24,4 +24,5 @@ public class OpenLinkPage extends BasePage {
         click(newWindow);
         return new NewBrowserWindowPage(driver);
     }
+
 }

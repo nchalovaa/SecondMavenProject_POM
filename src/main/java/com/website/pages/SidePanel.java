@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SidePanel extends BasePage{
 
+
     public SidePanel(WebDriver driver) {
         super(driver);
     }
@@ -55,5 +56,21 @@ public class SidePanel extends BasePage{
     public CheckBoxPage selectCheckBoxesButton() {
         click(checkboxes);
         return new CheckBoxPage(driver);
+    }
+
+    @FindBy(css="a[href='/drag_and_drop']")
+    WebElement dragAndDrop;
+
+    public DropDownPage clickDragAndDropButton(){
+        click(dragAndDrop);
+        return new DropDownPage(driver);
+    };
+
+    @FindBy(css="a[href='/broken_images']")
+    WebElement brokenImages;
+
+    public BrokenImagesPage clickBrokenImagesButton() {
+        click(brokenImages);
+        return new BrokenImagesPage(driver);
     }
 }

@@ -11,11 +11,12 @@ public class NewBrowserWindowTest extends TestBase {
         @BeforeMethod
         public void precondition(){
             new SidePanel(driver).selectMultiplyWindows();
-            new OpenLinkPage(driver).selectBrowserWindows();
+
         }
 
         @Test
     public void NewWindowsTest(){
+            new OpenLinkPage(driver).selectBrowserWindows();
             new NewBrowserWindowPage(driver).switchToNextWindow(1).verifyNewWindowMessage("New Window");
         }
 }

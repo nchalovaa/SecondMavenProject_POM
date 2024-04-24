@@ -15,11 +15,7 @@ public class NewBrowserWindowPage extends BasePage {
     }
 
 
-    @FindBy(css = "a[href='/windows/new']")
-    WebElement newWindow;
-
     public NewBrowserWindowPage switchToNextWindow(int index) {
-        click(newWindow);
 
         List<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(index));
@@ -28,7 +24,7 @@ public class NewBrowserWindowPage extends BasePage {
     }
 
 
-    @FindBy(xpath = "//class[.='example']")
+    @FindBy(css = ".example")
     WebElement example;
 
     public NewBrowserWindowPage verifyNewWindowMessage(String text) {
@@ -36,5 +32,6 @@ public class NewBrowserWindowPage extends BasePage {
         Assert.assertTrue(shouldHaveText(example, text, 10));
         return  this;
     }
+
 }
 
