@@ -15,6 +15,11 @@ public class DragAndDropTest extends TestBase{
 
     @Test
     public void actionDragMeTest(){
-        new DragAndDropPage(driver).actionDragMe();
+        new DragAndDropPage(driver).actionDragMe().verifyNewLetterInColumnA("B");
+    }
+
+    @Test
+    public void actionDragMeTestTwo(){
+        new DragAndDropPage(driver).actionDragMe().verifyNewLetterInColumnB("A");
     }
 }

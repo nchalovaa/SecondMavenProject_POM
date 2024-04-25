@@ -14,6 +14,6 @@ public class FileUploadTest extends TestBase{
 
     @Test
     public void fileUploadTest(){
-        new FileUploadPage(driver).uploadFile("C:/Tools/1.png");
+        new FileUploadPage(driver).uploadFile("C:/Tools/1.png").clickUploadButton().verifyMessage("File Uploaded!");
     }
 }
